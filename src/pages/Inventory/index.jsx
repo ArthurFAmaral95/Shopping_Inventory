@@ -1,3 +1,10 @@
+import { FilterableProductTable } from '../../components/FilterableProductTable'
+import './styles.css'
+
 export function Inventory() {
-  return <></>
+  return (
+    <div className="container">
+      <FilterableProductTable />
+    </div>
+  )
 }
