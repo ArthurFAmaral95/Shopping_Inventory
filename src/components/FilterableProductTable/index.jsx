@@ -4,6 +4,7 @@ import { SearchBar } from '../SearchBar'
 import { useState } from 'react'
 
 import './styles.css'
+import { CheckBox } from '../CheckBox'
 
 export function FilterableProductTable() {
   //colocar o json aqui. para usar no arquivo vou ter que usar state e effect
@@ -13,6 +14,10 @@ export function FilterableProductTable() {
 
   function textFilter(text) {
     setFilterText(text)
+  }
+
+  function filterStock() {
+    setInStockOnly(!inStockOnly)
   }
 
   const products = [
@@ -62,7 +67,7 @@ export function FilterableProductTable() {
 
   return (
     <div className="filterableProductTable">
-      <SearchBar inStockOnly={inStockOnly} textFilter={textFilter} />
+      <SearchBar textFilter={textFilter} filterStock={filterStock} />
       <ProductTable
         products={products}
         filterText={filterText}

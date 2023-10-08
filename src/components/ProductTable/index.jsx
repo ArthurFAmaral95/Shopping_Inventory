@@ -7,12 +7,27 @@ export function ProductTable({ products, filterText, inStockOnly }) {
   const categories = []
   const renderTable = []
   const filteredProducts = []
+  const productsInStock = []
 
   products.map(product => {
-    if (product.name.toLowerCase().includes(filterText)) {
-      filteredProducts.push(product)
+    if (product.stocked) {
+      productsInStock.push(product)
     }
   })
+
+  if (inStockOnly) {
+    productsInStock.map(product => {
+      if (product.name.toLowerCase().includes(filterText)) {
+        filteredProducts.push(product)
+      }
+    })
+  } else {
+    products.map(product => {
+      if (product.name.toLowerCase().includes(filterText)) {
+        filteredProducts.push(product)
+      }
+    })
+  }
 
   for (const product of filteredProducts) {
     for (const property in product) {
