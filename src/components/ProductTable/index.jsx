@@ -17,13 +17,13 @@ export function ProductTable({ products, filterText, inStockOnly }) {
 
   if (inStockOnly) {
     productsInStock.map(product => {
-      if (product.name.toLowerCase().includes(filterText)) {
+      if (product.name.toLowerCase().includes(filterText.trim())) {
         filteredProducts.push(product)
       }
     })
   } else {
     products.map(product => {
-      if (product.name.toLowerCase().includes(filterText)) {
+      if (product.name.toLowerCase().includes(filterText.trim())) {
         filteredProducts.push(product)
       }
     })
