@@ -2,10 +2,10 @@ import { CheckBox } from '../CheckBox'
 import { InputBox } from '../InputBox'
 import './styles.css'
 
-export function SearchBar(filterText, inStockOnly) {
+export function SearchBar({ textFilter, inStockOnly }) {
   return (
     <form className="searchBar">
-      <InputBox />
+      <InputBox onChange={textFilter} />
       <CheckBox />
     </form>
   )

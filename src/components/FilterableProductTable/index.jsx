@@ -11,6 +11,10 @@ export function FilterableProductTable() {
   const [filterText, setFilterText] = useState('')
   const [inStockOnly, setInStockOnly] = useState(false)
 
+  function textFilter(text) {
+    setFilterText(text)
+  }
+
   const products = [
     {
       category: 'Fruits',
@@ -58,7 +62,7 @@ export function FilterableProductTable() {
 
   return (
     <div className="filterableProductTable">
-      <SearchBar filterText={filterText} inStockOnly={inStockOnly} />
+      <SearchBar inStockOnly={inStockOnly} textFilter={textFilter} />
       <ProductTable
         products={products}
         filterText={filterText}

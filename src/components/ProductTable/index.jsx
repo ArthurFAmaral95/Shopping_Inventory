@@ -1,4 +1,3 @@
-import { render } from 'react-dom'
 import { ProductCategoryRow } from '../ProductCategoryRow'
 import { ProductRow } from '../ProductRow'
 import { ProductTableHeader } from '../ProductTableHeader'
@@ -7,8 +6,15 @@ import './styles.css'
 export function ProductTable({ products, filterText, inStockOnly }) {
   const categories = []
   const renderTable = []
+  const filteredProducts = []
 
-  for (const product of products) {
+  products.map(product => {
+    if (product.name.toLowerCase().includes(filterText)) {
+      filteredProducts.push(product)
+    }
+  })
+
+  for (const product of filteredProducts) {
     for (const property in product) {
       if (property === 'category' && !categories.includes(product[property])) {
         categories.push(product[property])
@@ -24,7 +30,7 @@ export function ProductTable({ products, filterText, inStockOnly }) {
       />
     )
 
-    products.map(product => {
+    filteredProducts.map(product => {
       if (product.category === category) {
         renderTable.push(
           <ProductRow
