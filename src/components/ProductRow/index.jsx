@@ -1,9 +1,9 @@
 import './styles.css'
 
-export function ProductRow({ name, price }) {
+export function ProductRow({ name, price, stocked }) {
   return (
     <tr>
-      <td>{name}</td>
+      <td className={stocked ? 'inStock' : 'outStock'}>{name}</td>
       <td>{price}</td>
     </tr>
   )

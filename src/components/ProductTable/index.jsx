@@ -31,6 +31,7 @@ export function ProductTable({ products }) {
             name={product.name}
             price={product.price}
             key={product.itemID}
+            stocked={product.stocked}
           />
         )
       }
