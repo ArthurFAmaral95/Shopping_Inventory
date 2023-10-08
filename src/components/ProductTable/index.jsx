@@ -1,9 +1,12 @@
+import { render } from 'react-dom'
 import { ProductCategoryRow } from '../ProductCategoryRow'
+import { ProductRow } from '../ProductRow'
 import { ProductTableHeader } from '../ProductTableHeader'
 import './styles.css'
 
 export function ProductTable({ products }) {
   const categories = []
+  const renderTable = []
 
   for (const product of products) {
     for (const property in product) {
@@ -13,20 +16,31 @@ export function ProductTable({ products }) {
     }
   }
 
-  const renderCategories = categories.map(category => (
-    <tr>
+  categories.map(category => {
+    renderTable.push(
       <ProductCategoryRow
         category={category}
         key={categories.indexOf(category)}
       />
-    </tr>
-  ))
+    )
 
-  console.log(renderCategories)
+    products.map(product => {
+      if (product.category === category) {
+        renderTable.push(
+          <ProductRow
+            name={product.name}
+            price={product.price}
+            key={product.itemID}
+          />
+        )
+      }
+    })
+  })
+
   return (
     <table>
       <ProductTableHeader />
-      <tbody>{renderCategories}</tbody>
+      <tbody>{renderTable}</tbody>
     </table>
   )
 }
