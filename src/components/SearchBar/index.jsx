@@ -4,9 +4,9 @@ import './styles.css'
 
 export function SearchBar() {
   return (
-    <div className="searchBar">
+    <form className="searchBar">
       <InputBox />
       <CheckBox />
-    </div>
+    </form>
   )
 }
