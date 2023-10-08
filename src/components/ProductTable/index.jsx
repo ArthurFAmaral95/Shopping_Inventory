@@ -4,7 +4,7 @@ import { ProductRow } from '../ProductRow'
 import { ProductTableHeader } from '../ProductTableHeader'
 import './styles.css'
 
-export function ProductTable({ products }) {
+export function ProductTable({ products, filterText, inStockOnly }) {
   const categories = []
   const renderTable = []
 
