@@ -1,7 +1,15 @@
 td {
   text-align: center;
+
+  font-size: 1.1rem;
+
+  padding-block: 0.1rem;
 }
 
 td.outStock {
   color: red;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgb(224, 224, 224);
 }
