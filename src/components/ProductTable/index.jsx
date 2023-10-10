@@ -3,7 +3,12 @@ import { ProductRow } from '../ProductRow'
 import { ProductTableHeader } from '../ProductTableHeader'
 import './styles.css'
 
-export function ProductTable({ products, filterText, inStockOnly }) {
+export function ProductTable({
+  products,
+  filterText,
+  inStockOnly,
+  selectedCategory
+}) {
   const categories = []
   const renderTable = []
   const filteredProducts = []
@@ -29,12 +34,19 @@ export function ProductTable({ products, filterText, inStockOnly }) {
     })
   }
 
-  for (const product of filteredProducts) {
-    for (const property in product) {
-      if (property === 'category' && !categories.includes(product[property])) {
-        categories.push(product[property])
+  if (!selectedCategory) {
+    for (const product of filteredProducts) {
+      for (const property in product) {
+        if (
+          property === 'category' &&
+          !categories.includes(product[property])
+        ) {
+          categories.push(product[property])
+        }
       }
     }
+  } else {
+    categories.push(selectedCategory)
   }
 
   categories.map(category => {
