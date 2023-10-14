@@ -10,9 +10,10 @@ export function FilterableProductTable() {
   const [filterText, setFilterText] = useState('')
   const [inStockOnly, setInStockOnly] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState(null)
+  const path = '../../../public/data/products.json'
 
   useEffect(() => {
-    fetch('../../../products.json')
+    fetch(path)
       .then(response => response.json())
       .then(data => setProducts(data))
   }, [])
