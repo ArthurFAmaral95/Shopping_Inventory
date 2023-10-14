@@ -90,24 +90,34 @@ This project consists of a simple inventory table with the following funcionalit
   </li>
 </ol>
 
+<hr>
+
 <h3>Screenshots</h3>
 
 <p align="center">
   <caption>Inventory table initial state.</caption>
+  <div align="center">
   <img alt="Inventory table initial state" src="./public/inventoryTable.png" width="300">
+  </div>
 </p>
 
 <p align="center">
   <caption>Inventory table search by product.</caption>
+  <div align="center">
   <img alt="Inventory table search by product." src="./public/nameSearch.png" width="300">
+  </div>
 </p>
 
 <p align="center">
   <caption>Inventory table stock search.</caption>
+  <div align="center">
   <img alt="Inventory table stock search." src="./public/onStock.png" width="300">
+  </div>
 </p>
 
 <p align="center">
   <caption>Inventory table search by category.</caption>
+  <div align="center">
   <img alt="Inventory table search by category." src="./public/categorySearch.png" width="300">
+  </div>
 </p>
