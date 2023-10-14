@@ -15,7 +15,7 @@ export function FilterableProductTable() {
     fetch('../../../products.json')
       .then(response => response.json())
       .then(data => setProducts(data))
-  }, [])
+  })
 
   function textFilter(text) {
     setFilterText(text)
