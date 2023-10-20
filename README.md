@@ -1,11 +1,14 @@
-<h1>Inventory Table</h1>
+<h1 align="center">Inventory Table</h1>
+
+<p align="center">
+  <img alt="Shopping inventory" src="./public/inventoryTable.png" width="100%">
+</p>
+
 <h2>
 This was a project  from React.dev web page where we use React to build a inventory table to display products by category, their prices and if are avaiable in stock.
 </h2>
 
-<hr>
-
-<h3>The Project</h3>
+## 💻 Project
 <p>
 This project consists of a simple inventory table with the following funcionalities and characteristics:
 </p>
@@ -42,82 +45,19 @@ This project consists of a simple inventory table with the following funcionalit
     If an specific category is chosen, the table only shows the products in that category.
   </li>
  </ul>
-<hr>
 
-<h3>Technologies</h3>
 
-<ol>
-  <li>
-  HTML
-    <ul>
-      <li>Class</li>
-      <li>Id</li>
-      <li>Google Fonts</li>
-      <li>Form</li>
-      <li>Input: text and checkbox</li>
-      <li>Select and options</li>
-      <li>Table</li>
-    </ul>
-  </li>
+## 🚀 Technologies
 
-  <li>
-  CSS
-    <ul>
-      <li>Display Flex</li>
-      <li>Class Selector</li>
-      <li>Pseudo Selectors (nthchild)</li>
-    </ul>
-  </li>
+This project was developed using the following technologies:
 
-  <li>
-  JavaScript
-    <ul>
-      <li>Functions</li>
-      <li>Arrow Functions</li>
-      <li>Loops</li>
-      <li>Conditionals</li>
-    </ul>
-  </li>
+- HTML e CSS
+- JavaScript
+- React
+- Git e Github
 
-  <li>
-  React
-    <ul>
-      <li>States</li>
-      <li>Effect</li>
-      <li>Props</li>
-      <li>Components</li>
-    </ul>
-  </li>
-</ol>
+## 🔖 How to access
 
-<hr>
+- [Access it online](https://shopping-inventory.vercel.app/)
 
-<h3>Screenshots</h3>
-
-<p align="center">
-  <caption>Inventory table initial state.</caption>
-  <div align="center">
-  <img alt="Inventory table initial state" src="./public/inventoryTable.png" width="300">
-  </div>
-</p>
-
-<p align="center">
-  <caption>Inventory table search by product.</caption>
-  <div align="center">
-  <img alt="Inventory table search by product." src="./public/nameSearch.png" width="300">
-  </div>
-</p>
-
-<p align="center">
-  <caption>Inventory table stock search.</caption>
-  <div align="center">
-  <img alt="Inventory table stock search." src="./public/onStock.png" width="300">
-  </div>
-</p>
-
-<p align="center">
-  <caption>Inventory table search by category.</caption>
-  <div align="center">
-  <img alt="Inventory table search by category." src="./public/categorySearch.png" width="300">
-  </div>
-</p>
+- Or download the zip file, download the modules needed with <code>npm install</code>, run <code>npm run dev</code> on the terminal and access localhost on a browser.
